@@ -15,6 +15,7 @@
 		FF29C0FB24B6020C008E0B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF29C0F924B6020C008E0B48 /* LaunchScreen.storyboard */; };
 		FF29C10624B6020C008E0B48 /* MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29C10524B6020C008E0B48 /* MemoryTests.swift */; };
 		FF29C11124B6020C008E0B48 /* MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29C11024B6020C008E0B48 /* MemoryUITests.swift */; };
+		FF29C11F24B60D38008E0B48 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29C11E24B60D38008E0B48 /* UIButtonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FF29C10C24B6020C008E0B48 /* MemoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF29C11024B6020C008E0B48 /* MemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryUITests.swift; sourceTree = "<group>"; };
 		FF29C11224B6020C008E0B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF29C11E24B60D38008E0B48 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				FF29C0F724B6020C008E0B48 /* Assets.xcassets */,
 				FF29C0F924B6020C008E0B48 /* LaunchScreen.storyboard */,
 				FF29C0FC24B6020C008E0B48 /* Info.plist */,
+				FF29C11E24B60D38008E0B48 /* UIButtonExtensions.swift */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF29C0F324B60209008E0B48 /* ViewController.swift in Sources */,
+				FF29C11F24B60D38008E0B48 /* UIButtonExtensions.swift in Sources */,
 				FF29C0EF24B60209008E0B48 /* AppDelegate.swift in Sources */,
 				FF29C0F124B60209008E0B48 /* SceneDelegate.swift in Sources */,
 			);
