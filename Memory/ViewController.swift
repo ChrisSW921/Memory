@@ -36,7 +36,6 @@ class ViewController: UIViewController {
     
     @IBAction func redButtonPressed(_ sender: UIButton) {
         sender.flash()
-        print("Red")
         userPattern.append(0)
         verifyPattern()
         
@@ -45,7 +44,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func greenButtonPressed(_ sender: UIButton) {
-        print("green")
         sender.flash()
         userPattern.append(1)
         verifyPattern()
@@ -53,7 +51,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func blueButtonPressed(_ sender: UIButton) {
-        print("blue")
         sender.flash()
         userPattern.append(2)
         verifyPattern()
@@ -61,7 +58,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func yellowButtonPressed(_ sender: UIButton) {
-        print("yellow")
         sender.flash()
         userPattern.append(3)
         verifyPattern()
@@ -74,6 +70,7 @@ class ViewController: UIViewController {
         redButton.isUserInteractionEnabled = true
         blueButton.isUserInteractionEnabled = true
         yellowButton.isUserInteractionEnabled = true
+        NextLevel.isUserInteractionEnabled = false
         currentLevel += 1
         LevelLabel.text = "Level: \(String(currentLevel))"
         currentIndex = 0
@@ -99,6 +96,7 @@ class ViewController: UIViewController {
             timer.invalidate()
             view.isUserInteractionEnabled = true
             GameInstructions.text = "Repeat Pattern"
+            
         }else{
             view.isUserInteractionEnabled = false
             GameInstructions.text = "Watch Pattern"
@@ -121,6 +119,9 @@ class ViewController: UIViewController {
             userPattern = []
             currentLevel = 0
         }else {
+            if userIndex == currentPattern.count - 1 {
+                NextLevel.isUserInteractionEnabled = true
+            }
             userIndex += 1
         }
         
