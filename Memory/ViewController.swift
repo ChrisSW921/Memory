@@ -130,7 +130,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        greenButton.isUserInteractionEnabled = false
+        redButton.isUserInteractionEnabled = false
+        blueButton.isUserInteractionEnabled = false
+        yellowButton.isUserInteractionEnabled = false
     }
 
 
