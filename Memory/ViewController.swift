@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var LevelLabel: UILabel!
     @IBOutlet weak var GameInstructions: UILabel!
+    @IBOutlet weak var NextLevel: UIButton!
     
     var currentLevel: Int = 0
     var highScore: Int = 0
@@ -69,6 +70,10 @@ class ViewController: UIViewController {
     
     func newLevel() {
         timer.invalidate()
+        greenButton.isUserInteractionEnabled = true
+        redButton.isUserInteractionEnabled = true
+        blueButton.isUserInteractionEnabled = true
+        yellowButton.isUserInteractionEnabled = true
         currentLevel += 1
         LevelLabel.text = "Level: \(String(currentLevel))"
         currentIndex = 0
@@ -108,12 +113,16 @@ class ViewController: UIViewController {
     func verifyPattern() {
         if userPattern.count > currentPattern.count || userPattern[userIndex] != currentPattern[userIndex] {
             GameInstructions.text = "You lose!"
+            greenButton.isUserInteractionEnabled = false
+            redButton.isUserInteractionEnabled = false
+            blueButton.isUserInteractionEnabled = false
+            yellowButton.isUserInteractionEnabled = false
+            NextLevel.isUserInteractionEnabled = true
             userPattern = []
             currentLevel = 0
         }else {
             userIndex += 1
         }
-        
         
     }
     

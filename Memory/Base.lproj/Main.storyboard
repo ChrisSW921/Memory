@@ -164,6 +164,7 @@
                     <connections>
                         <outlet property="GameInstructions" destination="7aa-AW-spk" id="KVr-MM-AOt"/>
                         <outlet property="LevelLabel" destination="GGT-ui-vdp" id="pVe-FE-tgG"/>
+                        <outlet property="NextLevel" destination="psV-hC-Rdo" id="oCw-6v-kdz"/>
                         <outlet property="blueButton" destination="g98-4z-6fj" id="bfE-my-UPr"/>
                         <outlet property="greenButton" destination="HeL-5b-Nff" id="Nfd-GN-r4n"/>
                         <outlet property="redButton" destination="k6f-J5-31J" id="oQr-9l-Tii"/>
