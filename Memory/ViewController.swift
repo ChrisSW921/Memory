@@ -18,14 +18,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var LevelLabel: UILabel!
     @IBOutlet weak var GameInstructions: UILabel!
     @IBOutlet weak var NextLevel: UIButton!
+    @IBOutlet weak var highScore: UILabel!
     
     var currentLevel: Int = 0
-    var highScore: Int = 0
+    //var highScore: Int = 0
     var currentPattern: [Int] = []
     var userPattern: [Int] = []
     var currentIndex: Int = 0
     var userIndex: Int = 0
     
+    let defaults = UserDefaults.standard
     
     var timer = Timer()
     
@@ -75,6 +77,12 @@ class ViewController: UIViewController {
         
         currentLevel += 1
         LevelLabel.text = "Level: \(String(currentLevel))"
+        
+        if currentLevel >= defaults.integer(forKey: "HighScore") {
+            defaults.set(currentLevel, forKey: "HighScore")
+            highScore.text = "High Score: \(defaults.integer(forKey: "HighScore"))"
+        }
+        
         currentIndex = 0
         userIndex = 0
         userPattern = []

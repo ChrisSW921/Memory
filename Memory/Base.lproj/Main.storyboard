@@ -167,6 +167,7 @@
                         <outlet property="NextLevel" destination="psV-hC-Rdo" id="oCw-6v-kdz"/>
                         <outlet property="blueButton" destination="g98-4z-6fj" id="bfE-my-UPr"/>
                         <outlet property="greenButton" destination="HeL-5b-Nff" id="Nfd-GN-r4n"/>
+                        <outlet property="highScore" destination="16g-k0-uUq" id="jHM-7d-cIH"/>
                         <outlet property="redButton" destination="k6f-J5-31J" id="oQr-9l-Tii"/>
                         <outlet property="yellowButton" destination="BYJ-1X-Zzc" id="IRz-SN-ybm"/>
                     </connections>
