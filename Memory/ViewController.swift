@@ -65,22 +65,27 @@ class ViewController: UIViewController {
     
     
     func newLevel() {
+        
         timer.invalidate()
         greenButton.isUserInteractionEnabled = true
         redButton.isUserInteractionEnabled = true
         blueButton.isUserInteractionEnabled = true
         yellowButton.isUserInteractionEnabled = true
         NextLevel.isUserInteractionEnabled = false
+        
         currentLevel += 1
         LevelLabel.text = "Level: \(String(currentLevel))"
         currentIndex = 0
         userIndex = 0
         userPattern = []
         currentPattern.removeAll()
+        
         for _ in 1...currentLevel {
             currentPattern.append(Int.random(in: 0 ..< 4))
         }
+        
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
+        
     }
     
     
@@ -111,6 +116,7 @@ class ViewController: UIViewController {
     func verifyPattern() {
         if userPattern.count > currentPattern.count || userPattern[userIndex] != currentPattern[userIndex] {
             GameInstructions.text = "You lose!"
+            NextLevel.titleLabel!.text = "Play Again"
             greenButton.isUserInteractionEnabled = false
             redButton.isUserInteractionEnabled = false
             blueButton.isUserInteractionEnabled = false
